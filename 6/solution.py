@@ -21,6 +21,6 @@ for word in product('АВЕНС', repeat=4): # пояснение выше
     cnt_word += 1
     word = ''.join(word) # Превращает картеж в строку. word = ('А', 'А', 'А', 'А') ⇒ word = "АААА" . Нужно для адекватной работы условия в if
 
-    if ('Е' not in word) and ('АА' not in word):
-        print(word, cnt_word)
+    if ('Е' not in word) and ('АА' not in word):# может быть количество каких-то букв: word.count("A") это подсчитывает количество А в слове
+        print(cnt_word, word)
         break
