@@ -12,7 +12,7 @@
 
 s = 6*'3' + 75*'4'
 
-while '35' in s or '355' in s or '3444' in s:
+while '35' in s or '355' in s or '3444' in s: : # очерёдность if очень важна!!! см алоритм в задании
     if '35' in s:
         s = s.replace('35','4',1)
     if '355' in s:
