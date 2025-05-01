@@ -12,6 +12,6 @@ for n in range(4,10000):
         if '2222' in s:
             s = s.replace('2222','5',1)
 
-    summ = sum(int(i) for i in s)
+    summ = sum(int(i) for i in s) # сумма цифр в строке
     if summ == 63:
         print(n)
