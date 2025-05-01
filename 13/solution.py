@@ -12,14 +12,14 @@ arr = [int(i)for i in f] # заносим элементы из файла в с
 # цикл для нахождения N - минимальное число в последовательности, НЕ кратное 15.
 min_N = 100001 # нам дан диапазон чисел
 for N in arr:
-    if N % 15 != 0:
+    if abs(N) % 15 != 0:
         min_N = min(N, min_N)
 count = 0
 max_summ = -200002 # - 100 000 * 2 - 2
 for i in range(len(arr) - 1):
     n1 = arr[i]
     n2 = arr[i + 1]
-    if n1 % min_N == 0 and n2 % min_N == 0:
+    if abs(n1) % abs(min_N) == 0 and abs(n2) % abs(min_N) == 0: # очень аккуратно с отрицательными числами
         count += 1
         summ = n1 + n2
         max_summ = max(summ, max_summ)
