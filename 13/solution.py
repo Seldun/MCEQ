@@ -16,9 +16,10 @@ for N in arr:
         min_N = min(N, min_N)
 count = 0
 max_summ = -200002 # - 100 000 * 2 - 2
-for i in range(len(arr) - 1):
+for i in range(len(arr) - 1): # если 3 последовательности, то range(len(arr) - 2)
     n1 = arr[i]
     n2 = arr[i + 1]
+    # если 3 последовательности, то n3 = arr[i + 2]
     if abs(n1) % abs(min_N) == 0 and abs(n2) % abs(min_N) == 0: # очень аккуратно с отрицательными числами
         count += 1
         summ = n1 + n2
